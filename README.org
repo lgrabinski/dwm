@@ -1,0 +1,7 @@
+#+TITLE: dwm
+#+AUTHOR: lgrabinski
+#+EMAIL: lgrabinski@gmail.com
+
+My fork of dwm - dynamic window manager for X from suckless.org 
+
+* patches 
