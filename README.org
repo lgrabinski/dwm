@@ -4,4 +4,47 @@
 
 My fork of dwm - dynamic window manager for X from suckless.org 
 
-* patches 
+* Patches 
+  - barpadding
+  - swallow
+  - xrdb
+    patch adjusted
+  - scratchpad
+  - statuscmd-signal
+  - warp
+  - actualfullscreen
+  - pertag
+  - centeredmaster
+  - fullgaps-toggle
+
+* Emoji support
+  Following lines comment out to support full emoji's in drw.c file
+  #+BEGIN_SRC c
+	FcBool iscol;
+	if(FcPatternGetBool(xfont->pattern, FC_COLOR, 0, &iscol) == FcResultMatch && iscol) {
+		XftFontClose(drw->dpy, xfont);
+		return NULL;
+	}
+  #+END_SRC
+
+* Keybindings
+  MODEKEY set to Left Alt
+
+  | Keybinding               | Action                              |
+  |--------------------------+-------------------------------------|
+  | MODKEY + ENTER           | open terminal (currently st)        |
+  | MODKEY + w               | open run launcher (currently dmenu) |
+  | MODKEY + q               | closes window wuith focus           |
+  | MODKEY + p               | bar toggle                          |
+  | MODKEY + j               | focus stack +1                      |
+  | MODKEY + k               | focus stack -1                      |
+  | MODKEY + s               | increase master                     |
+  | MODKEY + d               | decrease master                     |
+  | MODKEY + h               | decrease factor                     |
+  | MODKEY + l               | increase factor                     |
+  | MODKEY + SHIFT + f       | full screen window                  |
+  | MODKEY + CONTROL + ENTER | toggle scratchpad (currently st)    |
+  | MODKEY + minus           | window gaps decrease                |
+  | MODKEY + equal           | window gaps increase                |
+  | MODKEY + SHIFT + minus   | window gaps reset                   |
+  | MODKEY + SHIFT + equal   | window gaps toggle                  |
